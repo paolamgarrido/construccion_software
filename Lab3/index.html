@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primera pagina web</title>
+    <link rel="stylesheet" href="styles.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Mi Primera Pagina Web</h1>
+    </header>
+    <nav>
+      <a href="#seccion-preguntas" class="color">Preguntas</a>
+      <a href="#seccion-recursos" class="color">Recursos</a>
+    </nav>
+    <main>
+      <aside>
+        <h2 class="bold">Acerca de mí</h2>
+        <img src="images/foto.jpg" alt="Foto de perfil" />
+        <p class="bold">@paolagarrido</p>
+        <p>intro y datos de ti <em class="bold">wellnes y tecnología</em></p>
+        <p>Matricula: A01704017</p>
+        <p>Correo: a01704017@tec.mx</p>
+      </aside>
+      <section>
+        <h2 id="seccion-preguntas">Preguntas</h2>
+        
+        <p><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
+        <ul>
+          <li>
+              <strong>Internet:</strong> Es una red global de redes de
+              computadoras interconectadas que se comunican mediante protocolos
+              estándar de Internet, como TCP/IP (Protocolo de Control de
+              Transmisión/Protocolo de Internet). Es la infraestructura
+              subyacente que permite la comunicación entre computadoras y otros
+              dispositivos en todo el mundo. Internet proporciona la capacidad
+              de transferir datos y recursos entre diferentes ubicaciones
+              geográficas.
+          </li>
+          <li>
+              <strong>World Wide Web (WWW):</strong> Es un sistema de
+              información en línea que permite el acceso a documentos vinculados
+              mediante hipervínculos. La Web es solo una de las muchas
+              aplicaciones que se ejecutan en Internet. Fue inventada por Tim
+              Berners-Lee en 1989 y se desarrolló como un medio para compartir
+              información a través de una red de computadoras. La WWW utiliza
+              protocolos como HTTP (Protocolo de Transferencia de Hipertexto)
+              para la transferencia de datos y HTML (Lenguaje de Marcado de
+              Hipertexto) para la presentación de información.
+          </li>
+        </ul>
+
+        <p><strong>¿Cuáles son las partes de un URL?</strong></p>
+        <ul>
+          <li>
+            <strong>Esquema (Scheme):</strong> Indica el protocolo que se
+            utilizará para acceder al recurso, como HTTP, HTTPS, FTP, etc.
+          </li>
+          <li>
+            <strong>Nombre de dominio (Domain Name):</strong> Es la dirección
+            web del servidor donde reside el recurso. Puede ser un nombre de
+            dominio como "example.com" o una dirección IP.
+          </li>
+          <li>
+            <strong>Puerto (Port):</strong> Es un número opcional que especifica
+            el puerto del servidor al que se va a conectar. Por defecto, los
+            navegadores web utilizan el puerto 80 para HTTP y el puerto 443 para
+            HTTPS.
+          </li>
+          <li>
+            <strong>Ruta (Path):</strong> Especifica la ubicación del recurso
+            dentro del servidor. Por lo general, se representa como una cadena
+            de directorios y archivos separados por barras inclinadas ("/").
+          </li>
+          <li>
+            <strong>Consulta (Query):</strong> Es una cadena de parámetros de
+            consulta que se utiliza para enviar información adicional al
+            servidor. Se representa después del símbolo de interrogación ("?") y
+            puede contener múltiples pares de clave-valor separados por "&".
+          </li>
+          <li>
+            <strong>Fragmento (Fragment):</strong> Indica una parte específica
+            del recurso al que se debe desplazar el navegador después de cargar
+            la página. Se representa después del símbolo de almohadilla ("#").
+          </li>
+        </ul>
+
+        <p><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></p>
+        <ul>
+          <li>
+            <strong>GET:</strong> Se utiliza para solicitar datos de un recurso
+            específico. Es seguro e idempotente.
+          </li>
+          <li>
+            <strong>HEAD:</strong> Similar a GET, pero solicita solo los
+            encabezados de respuesta, sin el cuerpo del mensaje.
+          </li>
+          <li>
+            <strong>POST:</strong> Se utiliza para enviar datos al servidor para
+            su procesamiento. No es seguro ni idempotente.
+          </li>
+          <li>
+            <strong>PUT:</strong> Se utiliza para crear o actualizar un recurso
+            en una ubicación específica. Es idempotente.
+          </li>
+          <li>
+            <strong>PATCH:</strong> Se utiliza para realizar modificaciones
+            parciales en un recurso existente.
+          </li>
+          <li>
+            <strong>DELETE:</strong> Se utiliza para eliminar un recurso
+            específico en el servidor. Es idempotente.
+          </li>
+        </ul>
+
+        <p><strong>
+          ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo 
+          cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+        </strong></p>
+        <p>El método HTTP que generalmente se utiliza es el método POST.
+          El motivo principal por el cual se prefiere POST para el envío de
+          formularios es que este método está diseñado específicamente para
+          enviar datos al servidor para su procesamiento. Al enviar un
+          formulario con el método POST, los datos del formulario se incluyen en
+          el cuerpo de la solicitud HTTP en lugar de en la URL, lo que
+          proporciona cierta privacidad y seguridad, ya que los datos no se
+          muestran en la barra de direcciones del navegador y no quedan
+          expuestos en la caché del navegador o en los registros del servidor.
+          Esto es especialmente importante al enviar datos sensibles como
+          contraseñas.
+        </p>
+
+        <p> <strong>
+          ¿Qué método HTTP se utiliza cuando a través de un navegador web se
+          accede a una página a través de un URL?
+        </strong></p>
+        <p>
+          El método HTTP más comúnmente utilizado es el método GET. Este método
+          se utiliza para solicitar datos de un recurso específico del servidor.
+          Cuando escribes una URL en la barra de direcciones del navegador y
+          presionas Enter, el navegador envía una solicitud GET al servidor
+          correspondiente para recuperar la página web solicitada. El servidor
+          responde con el contenido HTML de la página, que luego se renderiza y
+          muestra en el navegador.
+        </p>
+
+        <p><strong>
+          Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué
+          significa esto? ¿Ocurrió algún error?
+        </strong></p>
+        <p>
+          Significa que la solicitud fue exitosa. El código de estado 200 en
+          HTTP se conoce como "OK" (Correcto). Indica que la solicitud del
+          cliente se procesó correctamente y que el servidor está devolviendo el
+          contenido solicitado.
+        </p>
+
+        <p><strong>
+          ¿Es responsabilidad del desarrollador corregir un sitio web si un
+          usuario reporta que intentó acceder al sitio y se encontró con un
+          error 404? ¿Por qué?
+        </strong></p>
+        <p>
+          Este error indica que el recurso solicitado no fue encontrado en el
+          servidor, por lo tanto es responsabilidad del desarrollador corregir
+          los errores 404 reportados por los usuarios en un sitio web. Cabe
+          recalcar que esto puede ocurrir por varias razones, tales como cambios
+          en la estructura del sitio, enlaces rotos o recursos eliminados.
+          Mantener un sitio web funcional y sin errores es esencial para
+          garantizar una experiencia positiva para los usuarios así como
+          mantener la visibilidad en los motores de búsqueda.
+        </p>
+
+        <p><strong>
+          ¿Es responsabilidad del desarrollador corregir un sitio web si un
+          usuario reporta que intentó acceder al sitio y se encontró con un
+          error 500? ¿Por qué?
+        </strong></p>
+        <p>
+          Sí, es responsabilidad del desarrollador corregir un sitio web si un
+          usuario reporta que encontró un error 500 al intentar acceder al
+          sitio. El error 500, también conocido como "Error interno del
+          servidor", indica un problema en el servidor que impide que se procese
+          la solicitud del usuario. Es crucial resolver este problema para
+          mantener la funcionalidad del sitio, ya que normalmente se debe a
+          problemas como errores de programación, configuraciones incorrectas,
+          problemas de permisos, entre otros.
+        </p>
+
+        <p><strong>
+          ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
+          (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
+          desaprobados.
+        </strong></p>
+        <p>
+          Cuando un atributo HTML5 está "depreciado" o "desaprobado"
+          (deprecated), significa que se considera obsoleto y que su uso se
+          desaconseja en favor de métodos o tecnologías más modernas y
+          compatibles. Esto generalmente se debe a la introducción de estándares
+          más nuevos, prácticas de codificación mejoradas o la eliminación de
+          características anticuadas que pueden causar problemas de
+          interoperabilidad o seguridad.
+        </p>
+
+        <p>
+          Algunos elementos de HTML 4 que están desaprobados en HTML5 incluyen:
+        </p>
+        <ul>
+          <li>
+            El atributo align: Se usaba en HTML4 para alinear elementos como
+            imágenes o tablas, pero en HTML5 se recomienda utilizar estilos CSS
+            para la alineación.
+          </li>
+          <li>
+            El atributo frame y los elementos &lt;frame&gt;, &lt;frameset&gt;,
+            &lt;noframes&gt;: Estos elementos solían usarse para crear diseños
+            de marcos en páginas web, pero se han eliminado en HTML5 en favor de
+            diseños más modernos y flexibles usando CSS.
+          </li>
+          <li>
+            El atributo name en el elemento &lt;a&gt; para crear anclas: En
+            HTML5, se recomienda el uso del atributo id para este propósito en
+            lugar del atributo name en elementos &lt;a&gt;.
+          </li>
+          <li>
+            Los atributos border, bgcolor, cellpadding, cellspacing en la
+            etiqueta &lt;table&gt;: En HTML5, se recomienda utilizar CSS para el
+            estilo y la presentación de las tablas en lugar de estos atributos,
+            que se utilizaban en HTML4.
+          </li>
+        </ul>
+
+        <p><strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5? </strong></p>
+        <p>
+          HTML5 representa una evolución significativa con respecto a HTML4 al
+          introducir características nuevas y mejoradas. Entre estas se
+          incluyen:
+        </p>
+        <ul>
+          <li>
+            Semántica mejorada con elementos como &lt;header&gt; y
+            &lt;footer&gt;
+          </li>
+          <li>
+            Soporte integrado para multimedia con &lt;audio&gt; y &lt;video&gt;
+          </li>
+          <li>Capacidades gráficas y de animación con &lt;canvas&gt;</li>
+          <li>
+            APIs para almacenamiento y comunicación, incluyendo geolocalización
+            y WebSocket
+          </li>
+          <li>Mejoras en formularios</li>
+          <li>Soporte para dispositivos móviles</li>
+        </ul>
+        <p>
+          Estas mejoras han transformado la manera en que se desarrollan y se
+          interactúa con las aplicaciones web, permitiendo experiencias más
+          dinámicas y potentes.
+        </p>
+
+        <p><strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></p>
+        <p>Elementos de estructura</p>
+        <ul>
+          <li>&lt;table&gt;: Define la estructura principal de la tabla.</li>
+          <li>&lt;tr&gt;: Define una fila dentro de la tabla.</li>
+          <li>&lt;td&gt;: Define una celda de datos dentro de una fila.</li>
+          <li>
+            &lt;th&gt;: Define una celda de encabezado dentro de una fila, que
+            normalmente se utiliza para las etiquetas de columna o fila.
+          </li>
+          <li>
+            &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;: Opcionalmente, se
+            pueden utilizar para organizar visualmente la tabla en tres
+            secciones: encabezado, cuerpo y pie.
+          </li>
+        </ul>
+        <p>Elementos de estilo</p>
+        <ul>
+          <li>border: Define el ancho del borde de la tabla y sus celdas.</li>
+          <li>
+            border-collapse: Especifica si los bordes de las celdas de la tabla
+            deben colapsar en uno solo.
+          </li>
+          <li>
+            border-spacing: Establece el espacio entre las celdas de la tabla si
+            border-collapse está configurado en separate.
+          </li>
+          <li>width, height: Define el ancho y el alto de la tabla.</li>
+          <li>
+            background-color, color: Establece el color de fondo y el color de
+            texto de la tabla y sus celdas.
+          </li>
+          <li>
+            text-align, vertical-align: Alinea el texto dentro de las celdas
+            horizontal y verticalmente, respectivamente.
+          </li>
+          <li>
+            padding, margin: Define el espacio interno y externo de las celdas
+            de la tabla.
+          </li>
+          <li>
+            font-family, font-size: Establece la fuente y el tamaño de fuente
+            del texto en la tabla.
+          </li>
+          <li>
+            border-color: Define el color del borde de la tabla y sus celdas.
+          </li>
+          <li>
+            border-style: Especifica el estilo del borde, como sólido, punteado,
+            etc.
+          </li>
+        </ul>
+
+        <p><strong>¿Cuáles son los principales controles de una forma HTML5?</strong></p>
+        <ul>
+          <li>
+            <strong>Input:</strong> El elemento &lt;input&gt; es uno de los
+            controles más versátiles en HTML5. Puede ser de varios tipos, como
+            texto, contraseña, fecha, número, email, entre otros.
+          </li>
+          <li>
+            <strong>Textarea:</strong> El elemento &lt;textarea&gt; permite a
+            los usuarios ingresar texto largo o comentarios en un área de texto
+            multi-línea.
+          </li>
+          <li>
+            <strong>Select:</strong> El elemento &lt;select&gt; se utiliza para
+            crear menús desplegables, donde los usuarios pueden seleccionar una
+            opción de una lista predefinida.
+          </li>
+          <li>
+            <strong>Checkbox:</strong> El elemento &lt;input type="checkbox"&gt;
+            permite a los usuarios seleccionar una o varias opciones de una
+            lista de opciones.
+          </li>
+          <li>
+            <strong>Radio Button:</strong> El elemento &lt;input
+            type="radio"&gt; se utiliza para crear botones de opción, donde los
+            usuarios pueden seleccionar una sola opción de una lista de
+            opciones.
+          </li>
+          <li>
+            <strong>Botón:</strong> El elemento &lt;button&gt; se utiliza para
+            crear botones que los usuarios pueden hacer clic para enviar un
+            formulario o realizar otras acciones.
+          </li>
+          <li>
+            <strong>Submit y Reset:</strong> Los botones &lt;input
+            type="submit"&gt; y &lt;input type="reset"&gt; se utilizan para
+            enviar y restablecer un formulario, respectivamente.
+          </li>
+          <li>
+            <strong>Campo de Archivo:</strong> El elemento &lt;input
+            type="file"&gt; permite a los usuarios seleccionar y cargar archivos
+            desde su dispositivo.
+          </li>
+        </ul>
+
+        <p><strong>
+          ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes
+          utilizar la siguiente página para descubrirlo: http://html5test.com/
+          (Al responder la pregunta recuerda poner el navegador que utilizas)
+        </strong></p>
+        <p>
+          Según HTML5test, un sitio web que mide la compatibilidad de los
+          navegadores con HTML5, Edge obtuvo 535 puntos de 555 posibles en su
+          última versión. Esto significa que soporta la mayoría de las
+          características de HTML5, como las etiquetas de audio, vídeo, canvas,
+          y otras.
+        </p>
+
+        <p><strong>
+          Sobre el ciclo de vida y desarrollo de los sistemas de información:
+          ¿Cuál es el ciclo de vida de los sistemas de información? ¿Cuál es el
+          ciclo de desarrollo de sistemas de información?
+        </strong></p>
+        <p>
+          El ciclo de vida de los sistemas de información se refiere al conjunto
+          de etapas por las que pasa un sistema de información desde su
+          concepción hasta su retiro. Estas etapas comúnmente incluyen la
+          planificación, análisis, diseño, implementación, operación y
+          mantenimiento del sistema.
+
+          Por otro lado, el ciclo de desarrollo de sistemas de información se
+          enfoca específicamente en el proceso de construcción del sistema,
+          siguiendo un enfoque iterativo e incremental que incluye la definición
+          de requisitos, el diseño, la implementación, las pruebas y la entrega
+          del sistema funcional. Ambos ciclos están interrelacionados y forman
+          parte del proceso de creación y gestión efectiva de sistemas de
+          información.
+
+          En resumen, el ciclo de vida de los sistemas de información abarca
+          todas las etapas desde la concepción hasta la desactivación del
+          sistema, mientras que el ciclo de desarrollo se centra específicamente
+          en la construcción y mejora continua del sistema durante su
+          desarrollo.
+        </p>
+
+        <p><strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</strong></p>
+        <p>Como ingeniero de software, se recomienda usar `!important` en CSS con moderación, reservándolo para situaciones específicas donde sea realmente necesario anular estilos existentes. El abuso de `!important` puede dificultar la comprensión de la cascada de estilos, generar conflictos entre reglas y dificultar la creación de diseños adaptables. Es preferible resolver problemas de estilo utilizando selectores más específicos o reorganizando el orden de las reglas CSS antes de recurrir a `!important`, lo que ayudará a mantener un código CSS más limpio y fácil de mantener a largo plazo.
+        </p>
+
+        <p><strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</strong></p>
+        <p>Seleccionar una imagen de fondo para una página HTML requiere cuidado debido a varios factores. Es crucial elegir una imagen optimizada en términos de tamaño de archivo para evitar tiempos de carga prolongados. Además, la imagen no debe interferir con la legibilidad del contenido ni causar distracciones visuales excesivas. Se debe probar la compatibilidad con diferentes dispositivos y navegadores para garantizar una visualización consistente, y la imagen debe integrarse armoniosamente con el diseño general de la página para mantener la coherencia visual y mejorar la experiencia del usuario.
+        </p>
+
+        <p><strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</strong></p>
+        <ul>
+          <li><strong>Flexibilidad y capacidad de respuesta:</strong> El uso de porcentajes (%) permite que los elementos se escalen dinámicamente en relación con su contenedor padre, lo que los hace ideales para diseños responsivos que se adaptan a diferentes tamaños de pantalla.</li>
+          <li><strong>Precisión y consistencia:</strong> Los píxeles (px) son unidades absolutas y proporcionan una precisión exacta en el tamaño y posición de los elementos en la pantalla, lo que puede ser útil para mantener una consistencia visual en diseños fijos o cuando se requiere una alineación precisa de elementos.</li>
+          <li><strong>Usabilidad y accesibilidad:</strong> Los puntos (pt) pueden causar problemas de accesibilidad, ya que no se escalan con el tamaño de fuente del usuario. Por lo tanto, se recomienda evitar el uso de puntos para propiedades de estilo en la web, especialmente para tamaños de fuente.</li>
+        </ul>
+
+        <p><strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong></p>
+        <p>El uso de una versión minimizada del CSS mejora el rendimiento del sitio web al reducir el tamaño del archivo, disminuir el tiempo de transferencia y optimizar el almacenamiento en caché. Eliminando comentarios, espacios en blanco y caracteres innecesarios, el archivo CSS minimizado se carga más rápido en el navegador del usuario, lo que resulta en tiempos de carga de página más rápidos y una experiencia de usuario mejorada, especialmente en dispositivos móviles y conexiones de red más lentas. Además, la optimización del almacenamiento en caché permite que el navegador almacene el CSS localmente, lo que reduce la necesidad de volver a solicitarlo al servidor en visitas posteriores.
+        </p>
+
+        <h2 id="seccion-recursos">Recursos</h2>
+        <p>Aprendí y aplique algunos conceptos de los siguientes tutoriales en mi proyecto: </p>
+        <p>Tutorial 1: https://www.youtube.com/watch?v=qz0aGYrrlhU</p>
+        <p>Tutorial 2: https://www.youtube.com/watch?v=Hsu8uqQTSV8&t=476s </p>
+      </section>
+    </main>
+    <footer>
+      <a href="#" class="color">Volver al inicio</a>
+      <p>Creado con &copy; <a href="https://visualstudio.microsoft.com/" class="color">Visual Studio</a></p>
+    </footer>
+  </body>
+</html>
