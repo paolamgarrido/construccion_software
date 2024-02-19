@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box; /*Allows to include padding and border in elements total width and height*/
+}
+
+p{
+    padding: 20px;
+}
+
+/* Navegation Bar */
+
+.navbar-brand {
+    margin-left: 20px; 
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+.navbar-nav a:not(:last-child) {
+    margin-right: 20px; 
+}
+
+.navbar-nav a:last-child {
+    margin-right: 30px; 
+}
+
+.navbar-nav a.nav-link:hover {
+    color: rgb(111, 133, 103); 
+}
+
+/* Home */
+
+header{
+    background: linear-gradient(to bottom, #f0f0f0, #cbcbbc);;
+}
+
+.section-padding {
+    padding-top: 40px; /* Adjust as needed */
+    padding-bottom: 40px; /* Adjust as needed */
+}
+
+.small-image {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
+
+/* About Us */
+.large-image {
+    width: 500px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
+
+.medium-image {
+    width: 350px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
+
+.section-2{
+    background-color:#f0f0f0 ;
+    padding-top: 80px; 
+    padding-bottom: 80px;
+}
+
+.section-2 h1{
+    padding: 20px;
+}
+
+
+/*Course*/
+.section-3 {
+    margin-top: 200px; 
+    margin-bottom: 200px; 
+}
+
+/*Pricing*/
+.section-4{
+    background-color:#f0f0f0 ;
+    padding-top: 80px; 
+    padding-bottom: 80px;
+}
+
+.section-4 .price .card {
+    width: 70%; /* Set the width of the cards */
+    margin: 0 auto; /* Center the cards horizontally */
+}
+
+/* Footer */
+footer{
+    margin-top: 30px;
+    padding: 30px;
+}
+
+footer h4{
+    padding-bottom: 10px;
+}
+
+footer p{
+    text-align:justify;
+}
+
+i{
+    padding:10px;
+}
