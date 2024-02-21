@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="myapp.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide: Exercise 1 -->
+                <div class="carousel-item active">
+                    <h3>1 - Entrada: un número pedido con un prompt. Salida: Una tabla con los números del 1 al número dado con sus cuadrados y cubos. (Utiliza document.write para producir la salida.)</h3>
+                    <h4>Tabla de cuadrados y cubos</h4>
+                    <button id="btnEjercicio1" onclick="realizarEjercicio1()">Realizar Ejercicio</button>
+                    <div id="resultadoEjercicio1"></div>
+                </div>
+                <!-- Second Slide: Exercise 2 -->
+                <div class="carousel-item">
+                    <h3>
+                        2 - Entrada: Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. Salida: La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en escribir la respuesta.</h3>
+                    <h4>Generar números aleatorios entre 1 y 100. El usuario debe ingresar el resultado de la suma de los números.</h4>
+                    <button id="btnEjercicio2" onclick="realizarEjercicio2()">Realizar Ejercicio</button>
+                    <div id="resultadoEjercicio2"></div>
+                </div>
+                <!-- Exercise 3 -->
+                <div class="carousel-item">
+                    <h3>3 - Función: contador. Parámetros: Un arreglo de números. Regresa: La cantidad de números negativos en el arreglo, la cantidad de 0's, y la cantidad de valores mayores a 0 en el arreglo.</h3>
+                    <h4>Cantidad de números negativos, 0's y valores mayores a 0 en el arreglo </h4>
+                    <button id="btnEjercicio3" onclick="realizarEjercicio3()">Realizar Ejercicio</button>
+                    <div id="resultadoEjercicio3"></div>
+                </div>
+                <!-- Exercise 4 -->
+                <div class="carousel-item">
+                    <h3>4 - Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.</h3>
+                    <h4>Promedios de la Matriz</h4>
+                    <button id="btnEjercicio4" onclick="realizarEjercicio4()">Realizar Ejercicio</button>
+                    <div id="resultadoEjercicio4"></div>
+                </div>
+                <!-- Exercise 5 -->
+                <div class="carousel-item">
+                    <h3>5 - Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.</h3>
+                    <h4>Número inverso</h4>
+                    <button id="btnEjercicio5" onclick="realizarEjercicio5()">Realizar Ejercicio</button>
+                    <div id="resultadoEjercicio5"></div>
+                </div>
+                <!-- Exercise 6 -->
+                <div class="carousel-item">
+                    <h3>6 - Ejercicio libre: Recordatorio de Suplementos</h3>
+                    <h4>
+                        Actualmente estoy en un tratamiento medico y olvido tomar mis suplementos, así que cree un programa que me ayude a ver los horarios y las dosis correspondientes,
+                        permitiendome seleccionar si ya tome mi suplemento o no. 
+                    </h4>
+                    <div class="container-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Horario</th>
+                                    <th>Suplementos</th>
+                                    <th>Dosis</th>
+                                    <th>Estatus</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaSuplementos">
+                                <!-- Aquí se generará la tabla dinámicamente con JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>                    
+                    <button class = "button-margin" onclick="resetear()">Resetear</button>
+                </div> 
+                <div class="carousel-item">
+                    <h3>Preguntas</h3>
+                    <h5>
+                        ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+                    </h5>
+                    <p>
+                        <strong>Diferencias:</strong><br>
+                        Tipo de lenguaje: Java es un lenguaje de programación orientado a objetos, mientras que JavaScript es un lenguaje interpretado y orientado a objetos y prototipos.<br>
+                        Aplicación: Java se utiliza principalmente en desarrollo de aplicaciones de escritorio, web empresarial y móvil, mientras que JavaScript se utiliza principalmente en desarrollo web.<br>
+                        Compilación vs. Interpretación: Java se compila en bytecode ejecutable en la JVM, mientras que JavaScript es interpretado por el navegador.<br>
+                        <strong>Semejanzas:</strong><br>
+                        Ambos son lenguajes de programación de propósito general.<br>
+                        Ambos tienen sintaxis similares a C.<br>
+                        Ambos son ampliamente utilizados en la industria del software.<br>
+                    </p>
+                    <h5>
+                        ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
+                    </h5>
+                    getDate(): Devuelve el día del mes (1-31).<br>
+                    getMonth(): Devuelve el mes (0-11).<br>
+                    getFullYear(): Devuelve el año.<br>
+                    getHours(): Devuelve la hora (0-23).<br>
+                    getMinutes(): Devuelve los minutos (0-59).<br>
+                    <h5>
+                        ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
+                    </h5>
+                    push(): Agrega uno o más elementos al final del arreglo.<br>
+                    pop(): Elimina el último elemento de un arreglo.<br>
+                    shift(): Elimina el primer elemento de un arreglo.<br>
+                    unshift(): Agrega uno o más elementos al principio de un arreglo.<br>
+                    splice(): Cambia el contenido de un arreglo eliminando o reemplazando elementos existentes y/o agregando nuevos elementos.<br>
+                    <h5>
+                        ¿Cómo se declara una variable con alcance local dentro de una función?
+                    </h5>
+                    <pre><code>
+                        function miFuncion() {
+                            let variableLocal = 10;
+                        }
+                    </code></pre>
+                    <h5>
+                        ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+                    </h5>
+                    Puede dificultar la depuración y el mantenimiento del código.<br>
+                    Puede causar colisiones de nombres de variables si no se tiene cuidado.<br>
+                    Puede hacer que el código sea menos legible y más propenso a errores.<br>
+                    Puede dificultar la reutilización del código en otras partes de la aplicación.<br>
+                </div>                
+            </div>
+
+            <!-- Add carousel control buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

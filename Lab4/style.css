@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    margin: 0 auto;
+    position: relative; /* Add position relative */
+}
+
+.container h3{
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    color: rgb(68, 115, 197);
+}
+
+.container h4{
+    padding-bottom: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    background-color: rgba(0, 0, 0, 0.797);
+    width: 80px; 
+    height: 150px;
+    left: 0;
+}
+
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.797);
+    width: 80px; 
+    height: 150px;
+    right: 0;
+}
+
+/*Ejercicios 1 - 5*/
+
+#resultadoEjercicio1, #resultadoEjercicio2 , #resultadoEjercicio3 , #resultadoEjercicio4, #resultadoEjercicio5 {
+    display: flex;
+    justify-content: center; 
+}
+
+#btnEjercicio1, #btnEjercicio2, #btnEjercicio3, #btnEjercicio4, #btnEjercicio5 {
+    padding: 5px 15px; /* Adjust the padding as needed */
+    margin-bottom: 30px;
+    background-color: rgb(68, 115, 197); 
+    border-radius: 10px; /* Set border radius for rounded edges */
+    color: white; 
+    border: none; /* Remove border */
+}
+
+/* Ejercicio 6*/
+
+table {
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: black; 
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.button-margin{
+    margin-top: 20px;
+}
+
+.container-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Preguntas */
