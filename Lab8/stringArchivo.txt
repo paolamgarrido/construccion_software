@@ -1,0 +1,1 @@
+Soy un string guardado en archivo desde Node.js!
