@@ -55,7 +55,7 @@ const server = http.createServer((request, response) => {
     response.setHeader('Content-Type', 'text/html');
 
     // Ir al archivo html en lugar de pegar el contenido 
-    filesystem.readFile('lab6/index.html', 'utf8', (error, data) => {
+    filesystem.readFile('Lab6/index.html', 'utf8', (error, data) => {
         if (error) {
             // Mostrar error en caso de un problema 
             console.error('Error reading HTML file:', error);
