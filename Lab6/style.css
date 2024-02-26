@@ -136,3 +136,7 @@ i{
 .italic {
     font-style: italic;
 }
+
+.fa-regular.fa-eye, .fa-regular.fa-eye-slash{
+    color: black;
+  }
