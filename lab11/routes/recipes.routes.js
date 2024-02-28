@@ -1,0 +1,215 @@
+const express = require('express');
+
+const router = express.Router();
+
+const recipes = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9b40f91bc0.js" crossorigin="anonymous"></script>
+    <title>Blissful Store Recipes</title>
+
+    <style>
+        /* NAVEGATION BAR */
+
+        .navbar-brand {
+            margin-left: 20px; 
+        }
+
+        .navbar-nav {
+            margin-left: auto; /* Push navigation links to the right */
+        }
+
+        .navbar-nav a:not(:last-child) {
+            margin-right: 20px; 
+        }
+
+        .navbar-nav a:last-child {
+            margin-right: 30px; 
+        }
+
+        .navbar-nav button.nav-link {
+            padding: 10px 20px; /* Adjust padding to increase clickable area of cart */
+        }
+
+        /*SECTION TITLE*/
+        .section-title h1{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .section-title{
+            background-color: #f0f0f0 ;
+        }
+
+        .section-1{
+            padding-top: 60px; 
+            padding-bottom: 60px; 
+        }
+
+        .section-1 h3{
+            padding-bottom: 30px;
+        }
+
+        .section-1 p{
+            padding-bottom: 10px;
+        }
+
+        .medium-image {
+            width: 450px;
+            height: auto; 
+            padding-top: 20px; 
+            padding-bottom: 40px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: black;
+            color: white;
+        }
+
+        footer p{
+            padding-top: 40px;
+            padding-left: 650px;
+        }
+
+        footer h4{
+            padding-top: 20px;
+        }
+
+
+        i{
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-leaf fa-1x mx-1"></i> Blissful </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="active nav-link" href="/recipes">Recipes</i></a>
+                  <a class="nav-link" href="/FAQ">FAQ</i></a>
+                  <a class="nav-link" href="/contactus">Contact Us</i></a>
+                  <!-- Cart button to hide or make visible the cart information -->
+                  <button class="nav-link" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <section class="section-title"> 
+        <div class="container text-center">
+            <h1>A few of Our Favorites</h1>
+        </div>
+    </section>
+    <section class = "section-1">
+        <div class ="container">
+            <div class ="row">
+                <div class="col-md-7 col-sm-12 align-self-center">
+                    <h3>Celebration Sangria Punch</h3>
+                    <p class = "text-justify">
+                        <strong>Ingridients</strong>
+                        <ul>
+                            <li>5 red apples</li>
+                            <li>2 oranges</li>
+                            <li>5 limes</li>
+                            <li>20 ounces sparkling water</li>
+                            <li>12 sprigs fresh mint</li>
+                            <li>3 cups fresh raspberries, strawberries, and orange slices for filling the punch bowl</li>
+                        </ul>
+                    </p>
+                    <p class = "text-justify">
+                        <strong>Steps</strong>
+                        <ol>
+                            <li>Wash all produce well.</li>
+                            <li>Core and cut apples into the appropriate size for the juicer.</li>
+                            <li>Peel oranges and limes.</li>
+                            <li>Juice the apples, oranges, and limes and place in a punch bowl. Skim off any extra foam.</li>
+                            <li>Add the fresh raspberries, strawberries, and orange slices to the bowl.</li>
+                            <li>When ready to serve, stir in the sparkling water.</li>
+                        </ol>
+                    </p>
+                    <p>Makes: 72 ounces</p>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                   <img src="https://cdn.accentuate.io/560234692785/1699979498241/Sangria-Punch-.jpg?v=1699979498241" alt="Photo Juice" class = "medium-image" />
+                </div>    
+            </div>
+        </div>
+        <div class ="container">
+            <div class ="row">
+                <div class="col-md-5 col-sm-12">
+                   <img src="https://cdn.accentuate.io/560203104433/1699036765211/Smoothie-recipe-chocolate-peanut-butter-f.jpg?v=1699036765211" alt="Photo Smoothie" class = "medium-image" />
+                </div>
+                <div class="col-md-7 col-sm-12 align-self-center">
+                    <h3>Chocolate Peanut Butter Banana Shake</h3>
+                    <p class = "text-justify">
+                        <strong>Ingridients</strong>
+                        <ul>
+                            <li>1/4 cup dark chocolate chunks</li>
+                            <li>2 tablespoons peanut or almond butter</li>
+                            <li>1 frozen banana</li>
+                            <li>1 cup cashew or almond milk</li>
+                            <li>1 teaspoon honey</li>
+                            <li>1/2 cup ice</li>
+                        </ul>
+                    </p>
+                    <p class = "text-justify">
+                        <strong>Steps</strong>
+                        <ol>
+                            <li>Add all ingredients to the blender.⁣</li>
+                            <li>Blend on high until reaching your desired consistency, about 45-60 seconds.⁣</li>
+                        </ol>
+                    </p>
+                    <p>Makes: 16 ounces</p>
+                </div>    
+            </div>
+        </div>
+    </section>
+    <section class="section-backhome"> 
+        <div class="container text-center">
+            <a href="/" class="btn btn-dark px-5 py-3 mb-5" data-product="Continue Shopping">Continue Shopping</a>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-md-8 col-md-5">
+                    <p>
+                        &copy 2024 Blissful Co.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-center">Follow us</h4>
+                    <div class="column d-flex justify-content-center">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+`; 
+
+router.get('/', (request, response, next) => {
+    let html = recipes;
+    response.send(html);
+});
+
+module.exports = router;
