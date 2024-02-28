@@ -162,7 +162,7 @@ const html_home = `
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="/recepies">Recepies</i></a>
+                  <a class="nav-link" href="/recipes">Recipes</i></a>
                   <a class="nav-link" href="/contactus">Contact Us</i></a>
                   <!-- Cart button to hide or make visible the cart information -->
                   <button class="nav-link" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i></button>
@@ -622,7 +622,7 @@ const unsuccessful_form = `
 </html>
 `; 
 
-const recepies = `
+const recipes = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -630,7 +630,7 @@ const recepies = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/9b40f91bc0.js" crossorigin="anonymous"></script>
-    <title>Blissful Store Recepies</title>
+    <title>Blissful Store Recipes</title>
 
     <style>
         /* NAVEGATION BAR */
@@ -720,7 +720,7 @@ const recepies = `
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="/recepies">Recepies</i></a>
+                  <a class="nav-link" href="/recipes">Recipes</i></a>
                   <a class="nav-link" href="/contactus">Contact Us</i></a>
                   <!-- Cart button to hide or make visible the cart information -->
                   <button class="nav-link" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i></button>
@@ -929,9 +929,9 @@ const server = http.createServer((request, response) => {
                 }
             });
         });
-    }else if(request.url == "/recepies") {
+    }else if(request.url == "/recipes") {
         response.setHeader('Content-Type', 'text/html');
-        response.write(recepies)
+        response.write(recipes)
         response.end();
     }else{
         response.statusCode = 404;
