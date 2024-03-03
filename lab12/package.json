@@ -1,0 +1,32 @@
+{
+  "name": "lab12",
+  "version": "1.0.0",
+  "description": "Blissful Compras",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paolamgarrido/construccion_software.git"
+  },
+  "keywords": [
+    "Blissful",
+    "HTML",
+    "dinamico",
+    "Compras"
+  ],
+  "author": "Paola Garrido",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paolamgarrido/construccion_software/issues"
+  },
+  "homepage": "https://github.com/paolamgarrido/construccion_software#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
+  }
+}

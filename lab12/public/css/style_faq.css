@@ -1,0 +1,43 @@
+/* NAVEGATION BAR */
+
+.navbar-brand {
+    margin-left: 20px; 
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+.navbar-nav a:not(:last-child) {
+    margin-right: 20px; 
+}
+
+.navbar-nav a:last-child {
+    margin-right: 30px; 
+}
+
+.navbar-nav button.nav-link {
+    padding: 10px 20px; /* Adjust padding to increase clickable area of cart */
+}
+
+/*SECTION FAQ */
+
+.section-faq h1{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-faq{
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.section-faq h3{
+    padding-bottom: 30px;
+}
+
+.section-faq p{
+    padding-bottom: 10px;
+}

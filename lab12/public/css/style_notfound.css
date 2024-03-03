@@ -1,0 +1,16 @@
+.section-notfound {
+    min-height: 100vh; /* Set minimum height to cover the full viewport height */
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.section-notfound h1 {
+    font-size: 7rem; 
+}
+.section-notfound p {
+    padding-top: 20px;
+    padding-bottom: 42px;
+}
+
+.notfound-image {
+    width: 500px;
+}

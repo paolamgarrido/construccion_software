@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="./css/style_form.css">
+</head>
+<form action="/payment" method="POST">
+    <label class="label" for="name">Name on Card</label>
+    <input class="input text" id="name" name="name" required>
+    
+    <label class="label" for="cardNumber">Card Number</label>
+    <input class="input text" id="cardNumber" name="cardNumber" required>
+    
+    <div class="row">
+        <div class="col">
+            <label class="label" for="expirationMonth">Expiration Month</label>
+            <input class="input text" id="expirationMonth" name="expirationMonth" required>
+        </div>
+        <div class="col">
+            <label class="label" for="expirationYear">Expiration Year</label>
+            <input class="input text" id="expirationYear" name="expirationYear" required>
+        </div>
+    </div>
+    
+    <label class="label" for="cvv">CVV</label>
+    <input class="input text" id="cvv" name="cvv" required>
+    
+    <br><br>
+    <input class="button is-success" type="submit" value="Pay Now">
+</form>

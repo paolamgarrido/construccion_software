@@ -1,0 +1,259 @@
+/* NAVEGATION BAR */
+
+.navbar-brand {
+    margin-left: 20px; 
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+.navbar-nav a:not(:last-child) {
+    margin-right: 20px; 
+}
+
+.navbar-nav a:last-child {
+    margin-right: 30px; 
+}
+
+.navbar-nav button.nav-link {
+    padding: 10px 20px; /* Adjust padding to increase clickable area of cart */
+}
+
+
+/* SECTION 1 */
+
+.section-1{
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+}
+
+.section-1 h1, p{
+    padding-bottom: 30px;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.medium-image {
+    width: 450px;
+    height: auto; 
+    padding-top: 20px; 
+    padding-bottom: 40px;
+}
+
+
+/* SECTION 2 */
+
+.small-image {
+    width: 300px;
+    height: auto; 
+    padding-top: 20px; 
+    padding-bottom: 40px;
+}
+
+.card {
+    width: 70%; 
+    margin: 0 auto; 
+}
+
+.section-2 h1{
+    padding-bottom: 60px;
+}
+
+.section-2 h2{
+    padding-bottom: 10px;
+}
+
+.section-2{
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+    background-color: #f0f0f0;
+}
+
+/* SECTION 3 */
+
+.section-3{
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+
+}
+
+.section-3 h2 {
+    padding-right: 40px; 
+    padding-left: 40px; 
+    padding-bottom: 50px;
+}
+
+.section-3 h5,p {
+    padding-right: 40px; 
+    padding-left: 40px; 
+}
+
+/* FOOTER */
+
+footer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+    color: white;
+}
+
+footer p{
+    padding-top: 40px;
+    padding-left: 650px;
+}
+
+footer h4{
+    padding-top: 20px;
+}
+
+
+i{
+    padding:10px;
+}
+
+/* CART */
+
+.cart-container {
+    position: absolute; 
+    top: 68px; /* Helps place beneath the navigation bar */
+    right: 0; 
+}
+
+.cart-info {
+    visibility: hidden; /* Initially hidden */
+    background-color: white; 
+    color: black; 
+    padding: 20px; 
+    border: 0.5px solid black; 
+}
+
+.cart-table td:nth-child(3) {
+    text-align: center; /* Center-align the quantity column */
+}
+
+.cart-table td {
+    padding: 8px; /* Add padding to all table cells */
+}
+
+.center {
+    text-align: center;
+}
+
+/* FORMS */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-size: cover; 
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Take the full height of the viewport */
+} 
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Ensure the form takes full width */
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* SECTION NOT FOUND */
+
+.section-notfound {
+    min-height: 100vh; /* Set minimum height to cover the full viewport height */
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.section-notfound h1 {
+    font-size: 7rem; 
+}
+.section-notfound p {
+    padding-top: 20px;
+    padding-bottom: 42px;
+}
+
+.notfound-image {
+    width: 500px;
+}
+
+/*SECTION RECIPES*/
+
+.section-recipes h1{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-recipes{
+    background-color: #f0f0f0 ;
+}
+
+.section-recipes{
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+}
+
+.section-recipes h3{
+    padding-bottom: 30px;
+}
+
+.section-recipes p{
+    padding-bottom: 10px;
+}
+
+/*SECTION FAQ */
+
+.section-faq h1{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-faq{
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.section-faq h3{
+    padding-bottom: 30px;
+}
+
+.section-faq p{
+    padding-bottom: 10px;
+}

@@ -1,0 +1,16 @@
+<head>
+    <link rel="stylesheet" href="./css/style_form.css">
+</head>
+<form action="/contactus" method="POST">
+    <label class="label" for="name">Name</label>
+    <input class="input text" id="name" name="name" required>
+    
+    <label class="label" for="email">Email</label>
+    <input type="email" class="input text" id="email" name="email" required>
+    
+    <label class="label" for="message">Message</label>
+    <textarea class="input text" id="message" name="message" rows="6" required></textarea>
+    
+    <br><br>
+    <input class="button is-success" type="submit" value="Send">
+</form>

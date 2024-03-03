@@ -1,0 +1,75 @@
+/* NAVEGATION BAR */
+
+.navbar-brand {
+    margin-left: 20px; 
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+.navbar-nav a:not(:last-child) {
+    margin-right: 20px; 
+}
+
+.navbar-nav a:last-child {
+    margin-right: 30px; 
+}
+
+.navbar-nav button.nav-link {
+    padding: 10px 20px; /* Adjust padding to increase clickable area of cart */
+}
+
+/*SECTION RECIPES*/
+
+.section-recipes h1{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-recipes{
+    background-color: #f0f0f0 ;
+}
+
+.section-recipes{
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+}
+
+.section-recipes h3{
+    padding-bottom: 30px;
+}
+
+.section-recipes p{
+    padding-bottom: 10px;
+}
+
+.medium-image {
+    width: 450px;
+    height: auto; 
+    padding-top: 20px; 
+    padding-bottom: 40px;
+}
+
+/* FOOTER */
+
+footer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+    color: white;
+}
+
+footer p{
+    padding-top: 40px;
+    padding-left: 650px;
+}
+
+footer h4{
+    padding-top: 20px;
+}
+
+
+i{
+    padding:10px;
+}
