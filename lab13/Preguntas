@@ -1,0 +1,15 @@
+El estilo arquitectónico Modelo-Vista-Controlador (MVC) ofrece varios beneficios:
+
+1. Separación: MVC separa la lógica de negocio (modelo) de la presentación (vista) y la lógica de control (controlador), lo que facilita la organización del código y su mantenimiento.
+
+2. Reutilización de código: Al dividir la aplicación en componentes separados, es más fácil reutilizar el código en diferentes partes de la aplicación.
+
+3. Facilita el desarrollo en equipo: Permite a diferentes desarrolladores trabajar en diferentes componentes de la aplicación simultáneamente, ya que cada componente tiene su propia responsabilidad claramente definida.
+
+4. Mejora la escalabilidad: La estructura modular de MVC facilita la escalabilidad de la aplicación, ya que es más fácil agregar nuevas funcionalidades o modificar las existentes sin afectar otras partes del sistema.
+
+Sin embargo, también hay algunas desventajas asociadas con el uso de MVC:
+
+1. Posible sobrecarga de archivos: Al dividir la aplicación en múltiples archivos y carpetas para cada componente (modelo, vista, controlador), puede haber una sobrecarga de archivos, lo que puede complicar la navegación en proyectos grandes.
+
+3. Acoplamiento entre componentes: Aunque MVC promueve la separación, existe cierto nivel de acoplamiento entre el modelo, la vista y el controlador, lo que puede hacer que algunos cambios afecten a múltiples partes del sistema.
