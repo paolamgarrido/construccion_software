@@ -1,0 +1,30 @@
+<%- include('includes/navbar.ejs') %>
+<link rel="stylesheet" href="./css/creajoya.css">
+<div class="container text-center">
+    <h2 class="title">Agregar joya al catálogo</h2>
+</div>
+<br>
+<div class="container-form">
+    <div class="row justify-content-center">
+        <form action="/creajoya" method="POST">
+            <div class="column"><label class="label" for="marca">Marca </label><br>
+            <input class="input text" id="marca" name="marca"></div>
+            <div class="column"><label class="label" for="nombre">Nombre </label><br>
+            <input class="input text" id="nombre" name="nombre"></div>
+            <div class="column"><label class="label" for="tipo">Tipo </label><br>
+            <input class="input text" id="tipo" name="tipo"></div>
+            <div class="column"><label class="label" for="material">Material </label><br>
+            <input class="input text" id="material" name="material"></div>
+            <div class="column"><label class="label" for="piedra">Piedra </label><br>
+            <input class="input text" id="piedra" name="piedra"></div>
+            <div class="column"><label class="label" for="peso">Peso </label><br>
+            <input class="input text" id="peso" name="peso"></div>
+            <div class="column"><label class="label" for="numero_producto">Numero de producto</label><br>
+            <input class="input text" id="numero_producto" name="numero_producto"></div>
+            <div class="column"><label class="label" for="imagen">Imagen </label><br>
+            <input class="input text" id="imagen" name="imagen"></div>
+            <br>
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+    </div>
+</div>
