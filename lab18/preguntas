@@ -1,0 +1,11 @@
+Aparte de la autenticación basada en sesiones con contraseñas almacenadas de manera segura utilizando herramientas como bcrypt, existen otras formas de autenticación que se utilizan comúnmente en aplicaciones web:
+
+1. Token de acceso: En lugar de almacenar el estado de autenticación en una sesión en el servidor, se emite un token de acceso al cliente después de que se autentica correctamente. Este token se incluye en cada solicitud subsiguiente como un encabezado HTTP o un parámetro de consulta. Los tokens de acceso pueden ser JWT (JSON Web Tokens) o tokens opacos.
+
+2. OAuth y OpenID Connect: Estos son protocolos de autorización y autenticación respectivamente que permiten la autenticación federada. OAuth se utiliza para la autorización, mientras que OpenID Connect se construye sobre OAuth y se utiliza para la autenticación. Son ampliamente utilizados para permitir a los usuarios iniciar sesión con sus cuentas de redes sociales u otras identidades federadas.
+
+3. Autenticación de dos factores (2FA): Requiere que los usuarios proporcionen dos formas diferentes de autenticación para acceder a una cuenta. Por lo general, implica algo que el usuario sabe (como una contraseña) y algo que el usuario posee (como un teléfono móvil para recibir un código de verificación).
+
+4. Biometría: La autenticación biométrica utiliza características únicas del cuerpo humano, como huellas dactilares, iris, voz o reconocimiento facial, para verificar la identidad de un usuario. Es común en dispositivos móviles y cada vez más en aplicaciones web.
+
+5. Autenticación basada en certificados: Se utiliza un certificado digital para autenticar a un usuario en lugar de un nombre de usuario y contraseña. Los certificados digitales son emitidos por una entidad de certificación y se almacenan en el dispositivo del usuario.
