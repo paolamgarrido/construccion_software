@@ -1,0 +1,21 @@
+Escribir el código SQL únicamente en la capa del modelo tiene varias ventajas:
+
+1. Separación de responsabilidades: Al mantener todo el código SQL en la capa del modelo, se separa la lógica de acceso a la base de datos de otras partes de la aplicación, como la lógica de negocio y la presentación. Esto facilita la gestión del código y hace que sea más fácil de entender y mantener.
+
+2. Reutilización de código: Al centralizar el código SQL en el modelo, se puede reutilizar en diferentes partes de la aplicación. Esto evita la duplicación de código y facilita la actualización y modificación de consultas SQL en un solo lugar.
+
+3. Seguridad: Al utilizar consultas parametrizadas y preparadas correctamente en el modelo, se pueden prevenir las vulnerabilidades de seguridad como la inyección SQL. Además, al tener un control centralizado sobre las consultas SQL, se puede implementar la validación y la sanitización de datos de manera más efectiva.
+
+La inyección SQL es un tipo de vulnerabilidad de seguridad que ocurre cuando un atacante inserta código SQL malicioso en una consulta SQL a través de las entradas de usuario no validadas. Esto puede permitir al atacante acceder, modificar o eliminar datos en la base de datos, o incluso tomar el control del servidor.
+
+Para prevenir la inyección SQL, se deben seguir algunas prácticas de seguridad:
+
+1. Usar consultas parametrizadas o preparadas: En lugar de concatenar directamente valores de usuario en las consultas SQL, se deben utilizar parámetros en la consulta que se vinculen con los valores proporcionados por el usuario. Esto evita que el motor de base de datos interprete los valores de usuario como parte de la consulta SQL.
+
+2. Validar y sanitizar las entradas de usuario: Antes de utilizar los valores proporcionados por el usuario en una consulta SQL, se deben validar y sanitizar adecuadamente para asegurarse de que sean seguros y cumplan con los criterios esperados.
+
+3. Limitar los privilegios de la cuenta de base de datos: Asegúrese de que las cuentas de base de datos utilizadas por la aplicación tengan los privilegios mínimos necesarios para realizar las operaciones requeridas. Esto reduce el impacto de una inyección SQL exitosa.
+
+4. Utilizar cortafuegos y filtros de entrada: Implementar cortafuegos y filtros de entrada para restringir y controlar el tráfico de red entrante hacia la aplicación web, lo que puede ayudar a detectar y bloquear intentos de inyección SQL.
+
+Al seguir estas prácticas de seguridad, se puede reducir significativamente el riesgo de inyección SQL en una aplicación web.
