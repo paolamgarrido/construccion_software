@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: url(https://i.pinimg.com/736x/ef/01/31/ef0131ebda7949ac3bda843d7bccc6c8.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.container {
+    margin-top: 200px;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(221, 220, 214);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.label {
+    color: rgb(221, 220, 214);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #c0b887;
+}
+
+.registroform {
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.error-message {
+    text-align: center;
+    color: #c0b887;;
+}

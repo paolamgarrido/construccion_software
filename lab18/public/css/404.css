@@ -1,0 +1,16 @@
+.section-notfound {
+    min-height: 100vh; 
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.section-notfound h1 {
+    font-size: 7rem; 
+}
+.section-notfound p {
+    padding-top: 20px;
+    padding-bottom: 42px;
+}
+
+.notfound-image {
+    width: 300px;
+}
