@@ -1,0 +1,39 @@
+{
+  "name": "lab13",
+  "version": "1.0.0",
+  "description": "Tienda Joyeria",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paolamgarrido/construccion_software.git"
+  },
+  "keywords": [
+    "Joyeria",
+    "Tienda",
+    "MVC"
+  ],
+  "author": "Paola Garrido",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paolamgarrido/construccion_software/issues"
+  },
+  "homepage": "https://github.com/paolamgarrido/construccion_software#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie": "^0.6.0",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.9.2"
+  }
+}
