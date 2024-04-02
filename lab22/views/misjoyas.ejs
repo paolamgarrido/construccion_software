@@ -1,0 +1,27 @@
+<%- include('includes/navbar.ejs', {username: username}) %>
+<link rel="stylesheet" href="./css/misjoyas.css">
+<div class="container">
+    <div class="text-center">
+        <h1 class="title padding-title">Joyería destacada</h1>
+    </div>
+    <br><br>
+    <div class="row">
+        <% for (let joya of joyas) { %>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/uploads/<%= joya.imagen %>" class="card-img-top" alt="Imagen de <%= joya.nombre %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/joyas/<%= joya.id_producto%>"><%= joya.nombre %></a></h5>
+                        <hr>
+                        <p class="card-text">ID: <%= joya.id_producto %></p>
+                        <p class="card-text">Marca: <%= joya.marca %></p>
+                        <p class="card-text">Tipo: <%= joya.tipo %></p>
+                        <p class="card-text">Material: <%= joya.material %></p>
+                        <p class="card-text">Piedra: <%= joya.piedra %></p>
+                        <p class="card-text">Peso: <%= joya.peso %></p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
