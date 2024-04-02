@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="./css/login.css">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="login-form">
+                    <h2 class="title"><% if (registro) { %>GEMMA CATALOGUE REGISTRO<% } else { %>BIENVENIDO A GEMMA CATALOGUE<% } %> </h2>                  
+                    <form action="<% if (registro) { %>/signup<% } else { %>/<% } %>" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+                        <label class="label" for="username">Nombre de usuario</label>
+                        <input class="input text" id="username" name="username">
+                        <% if (registro) { %>
+                            <label class="label" for="nombre">Nombre completo</label>
+                            <input class="input text" id="nombre" name="nombre">
+                        <% } %>
+                        <label class="label" for="contraseña">Contraseña</label>
+                        <input class="input text" type="password" id="contraseña" name="contraseña">
+                        <br><br>
+                        <input class="button is-success" type="submit" value="<% if (registro) { %>Registrarme<% } else { %>Entrar<% } %>">
+                        <div class="error-message">
+                            <% if(error != '') { %>
+                                <div class="notification is-danger">
+                                    <br><%= error %></br>
+                                </div>
+                            <% } %>
+                        </div>
+                        <% if (username == '') { %>
+                            <br></br>
+                            <% if (!registro) { %>
+                                <a class = "registroform" href="/signup">
+                                    <strong>¿No tienes cuenta? Regístrate</strong>
+                                </a>
+                            <% } %>
+                        <% } %>   
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
