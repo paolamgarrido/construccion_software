@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Winehouse Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="gallery.css">           
+</head>
+
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="#gallery">Gallery</a>
+                        <a class="nav-link" href="#information">Information</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id = "gallery">
+        <div class="container">
+            <section>
+                <h1 class = "gallery"> THE GALLERY </h1>
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://i.ytimg.com/vi/ng_RimwatUI/maxresdefault.jpg" class="d-block w-100" alt="Photo1">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Record</h5>
+                          <p>Back to Black Tracks</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://th.bing.com/th/id/R.26b86af528d9f1ed6b49ccacfea8d587?rik=0wcdaSqxyrmQ8Q&pid=ImgRaw&r=0" class="d-block w-100" alt="Photo2">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Artist</h5>
+                          <p>Amy Winehouse</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://th.bing.com/th/id/OIP.zwuduZcnBmyxdMwdYHS7DAHaEK?w=1200&h=675&rs=1&pid=ImgDetMain" class="d-block w-100" alt="Photo3">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Live Concert</h5>
+                          <p> One of the favorites</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </section>
+        </div>
+    </section>
+    
+    
+    <section class="iframe-container">
+        <iframe
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/artist/6Q192DXotxtaysaqNPy5yR?utm_source=generator&theme=0" 
+            width="80%" 
+            height="100 vh" 
+            frameborder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <section class = "information" id = "information">
+        <h2> INFORMATION </h2>
+        
+        <h4>Advantages:</h4>
+        <ul>
+            <li><strong>Extended Functionality:</strong> Integrating third-party web services allows adding additional functionalities to your application without the need to develop them from scratch. This may include features such as payment processing, data analytics, user authentication, etc.</li>
+            
+            <li><strong>Time and Resource Saving:</strong> Utilizing existing web services can save development time and resources as complex functionalities don't need to be built internally. This can speed up development and time-to-market.</li>
+            
+            <li><strong>Specialization:</strong> Third-party web services are often specialized in certain areas, allowing you to leverage their specific expertise and knowledge to enhance your application in those areas.</li>
+            
+            <li><strong>Scalability:</strong> Many third-party web services are designed to be highly scalable, meaning they can handle large volumes of traffic seamlessly. This can be beneficial for your application as it grows its user base.</li>
+        </ul>
+        
+        <h4>Disadvantages:</h4>
+        <ul>
+            <li><strong>External Dependency:</strong> Integrating third-party web services creates a dependency on external providers. If the service experiences downtime or issues, it can affect the functionality of your application.</li>
+            
+            <li><strong>Privacy and Security Concerns:</strong> Sharing data with third-party services may raise privacy and security concerns, especially if sensitive user information is involved. It's essential to carefully evaluate the security measures of the third-party service.</li>
+            
+            <li><strong>Costs:</strong> While using third-party services may save development costs upfront, there could be ongoing subscription fees or usage-based charges associated with them. Additionally, pricing plans may change over time.</li>
+            
+            <li><strong>Customization Limitations:</strong> Third-party services may have limitations in terms of customization and configuration to fit exactly with your application's requirements. This may require compromises in functionality or user experience.</li>
+        </ul>
+    </section>
+    
+</body>
+
+<footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</footer>
+</html>
+
+<script src="spotify.js"></script>
