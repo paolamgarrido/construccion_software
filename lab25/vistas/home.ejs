@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones Bancarias</title>
+    <!-- Agregar Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Mi Cuenta Bancaria</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Información de la Cuenta</h4>
+                        <!-- Información de la cuenta -->
+                        <p><strong>Nombre:</strong> <%= cuenta.nombre %></p>
+                        <p><strong>Tipo de cuenta:</strong> <%= cuenta.tipo_cuenta %></p>
+                        <p><strong>Tipo de cliente:</strong> <%= cuenta.tipo_cliente %></p>
+                        <p><strong>Número de tarjeta:</strong> <%= cuenta.numero_tarjeta %></p>
+                        <p><strong>Saldo:</strong> <span id="saldo"><%= cuenta.saldo %></span></p>
+                    </div>
+                </div>
+                <!-- Formulario para realizar un depósito -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Depositar Fondos</h5>
+                        <form id="deposito-form" action="/depositar" method="post">
+                            <div class="form-group">
+                                <label for="cantidad-deposito">Cantidad a depositar:</label>
+                                <input type="number" class="form-control" id="cantidad-deposito" name="cantidad" min="0">
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="actualizarSaldo()">Depositar</button>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Formulario para realizar un retiro -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Retirar Fondos</h5>
+                        <form id="retiro-form" action="/retirar" method="post">
+                            <div class="form-group">
+                                <label for="cantidad-retiro">Cantidad a retirar:</label>
+                                <input type="number" class="form-control" id="cantidad-retiro" name="cantidad" min="0">
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="actualizarSaldo()">Retirar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Formulario para realizar una transferencia -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Transferir Fondos</h5>
+                        <form id="transferencia-form" action="/transferir" method="post">
+                            <div class="form-group">
+                                <label for="cantidad-transferencia">Cantidad a transferir:</label>
+                                <input type="number" class="form-control" id="cantidad-transferencia" name="cantidad" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="transferencia-account">Cuenta destino:</label>
+                                <input type="text" class="form-control" id="transferencia-account" name="transferenciaAccount">
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="actualizarSaldo()">Transferir</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Agregar Bootstrap JS (opcional, si es necesario para funcionalidades específicas de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Función para actualizar el saldo usando AJAX
+        function actualizarSaldo() {
+            $.ajax({
+                url: '/obtenerSaldo', // Ruta para obtener el nuevo saldo (ajusta según la configuración de tu servidor)
+                type: 'GET',
+                success: function(response) {
+                    // Actualiza el saldo en la página web
+                    $('#saldo').text(response.saldo);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error al obtener el saldo:', error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
